@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer</title>
+
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./js/script.js" defer></script>
+
+</head>
+<body>
+ <div class="timerFocus">
+  <div id="app">      
+     <button id="toggle-mode"><span class="sr-only">Ativar light mode</span>
+      <i class="ph-bold ph-sun"></i>
+      <i class="ph-bold ph-moon"></i>
+     </button>
+
+    <section id="timer" class="flex">
+      <span id="minutes">25</span>
+      <span>:</span>
+      <span id="seconds">00</span>
+    </section>
+
+    <section id="controls" class="flex">
+      
+      <button 
+      data-action="toggleRunning"
+      class="ph ph-play-circle">
+          <span class="sr-only">Iniciar contador</span>
+      </button>
+      
+      <button
+      data-action="toggleRunning"
+       class="ph ph-pause-circle">
+          <span class="sr-only">Pausar contador</span>
+      </button>
+      
+      <button
+      data-action="set"
+       class="ph ph-timer secondary">
+          <span class="sr-only">Ajustar contador</span>
+      </button>
+      
+      <button
+      data-action="reset"
+       class="ph ph-stop-circle secondary">
+          <span class="sr-only">Reiniciar contador</span>
+      </button>
+      
+      <button id="sum"
+      data-action="sum"
+       class="ph ph-plus-circle secondary">
+          <span class="sr-only">aumentar cinco minutos</span>
+      </button>
+      
+      <button id="minus"
+      data-action="minus"
+       class="ph ph-minus-circle secondary">
+          <span class="sr-only">diminuir cinco minutos</span>
+      </button>
+    
+    </section>
+   
+   </div>
+
+    <section id="right-buttons" class="sounds">
+      <button id="tree" data-action="toggleMusic" data-track="./assets/Floresta.wav" class="ph ph-tree">
+         <span class="sr-only">Iniciar/Parar Música 1</span>
+      </button>
+      <button id="rain" data-action="toggleMusic" data-track="./assets/Chuva.wav" class="ph ph-cloud-rain">
+         <span class="sr-only">Iniciar/Parar Música 2</span>
+      </button>
+      <button id="fire" data-action="toggleMusic" data-track="./assets/Lareira.wav" class="ph ph-campfire">
+         <span class="sr-only">Iniciar/Parar Música 3</span>
+      </button>
+      <button id="store" data-action="toggleMusic" data-track="./assets/Cafeteria.wav" class="ph ph-storefront">
+         <span class="sr-only">Iniciar/Parar Música 4</span>
+      </button>
+    </section>
+    
+   
+ </div>
+  
+</body>
+</html>
